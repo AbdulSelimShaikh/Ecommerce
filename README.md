@@ -1,5 +1,6 @@
 ~Abdul Selim Shaikh
-
+        /* note fast db.jsoan upload in git hub and set jason */
+        
  step1:-> i well Create Home.jsx,Cart.jsx,Create.jsx,Navbar.jsx,Read.jsx,Update.jsx,dp.json 
  
  step2:->App.jsx-> Craete var setData,data,cart,setCart,and call api set all data in setData,or 
