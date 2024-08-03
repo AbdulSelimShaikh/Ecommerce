@@ -18,7 +18,7 @@ function App() {
   const [cart, setCart] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:3000/users")
+      .get("https://my-json-server.typicode.com/AbdulSelimShaikh/dp_api/users")
       .then((res) => setData(res.data))
       .catch((err) => console.log(err));
   }, []);

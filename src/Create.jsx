@@ -20,7 +20,10 @@ function Create({ data, setData }) {
     event.preventDefault();
 
     axios
-      .post("http://localhost:3000/users", values)
+      .post(
+        "https://my-json-server.typicode.com/AbdulSelimShaikh/dp_api/users",
+        values
+      )
       .then((res) => {
         console.log(res);
         setData([...data, res.data]);

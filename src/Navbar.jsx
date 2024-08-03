@@ -15,7 +15,7 @@ function Navbar({ setData, cart }) {
   //call api or set all data in setData1
   useEffect(() => {
     axios
-      .get("http://localhost:3000/users")
+      .get("https://my-json-server.typicode.com/AbdulSelimShaikh/dp_api/users")
       .then((res) => setData1(res.data))
       .catch((err) => console.log(err));
   }, []);

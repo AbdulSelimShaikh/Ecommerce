@@ -26,11 +26,13 @@ function Home({ data, setData, cart, setCart }) {
     const confirm = window.confirm("are you delete");
     if (confirm) {
       axios
-        .delete("http://localhost:3000/users/" + id)
-        .then((res) => {
-          location.reload();
-        })
+        .delete(
+          `https://my-json-server.typicode.com/AbdulSelimShaikh/dp_api/users/${id}`
+        )
+        .then(() => {})
         .catch((err) => console.log(err));
+      const newJsonData = data.filter((item) => item.id !== id);
+      setData(newJsonData);
     }
   };
   return (

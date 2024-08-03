@@ -19,10 +19,10 @@ function Update({ data, setData }) {
   // get id data
   useEffect(() => {
     axios
-      .get("http://localhost:3000/users/" + id)
-      .then((res) => {
-        setValues(res.data);
-      })
+      .get(
+        `https://my-json-server.typicode.com/AbdulSelimShaikh/dp_api/users/${id}`
+      )
+      .then((res) => setValues(res.data))
       .catch((err) => console.log(err));
   }, [id]);
 
@@ -40,10 +40,11 @@ function Update({ data, setData }) {
     toast.success("Update Success");
 
     axios
-      .put("http://localhost:3000/users/" + id, values)
-      .then((res) => {
-        console.log(res);
-
+      .put(
+        `https://my-json-server.typicode.com/AbdulSelimShaikh/dp_api/users/${id}`,
+        values
+      )
+      .then(() => {
         navigate("/");
       })
       .catch((err) => console.log(err));
